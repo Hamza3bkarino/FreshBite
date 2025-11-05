@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="NavFooterStyle.css">
+    <script src="script.js" defer></script>
     <title>FreshBite</title>
 </head>
 <body>
@@ -14,18 +16,19 @@
         </h1>
         <ul class="list">
             <li>
-                <a href="">Home</a>
+                <a href="index.html">Home</a>
             </li>
             <li>
-                <a href="">Menu</a>
+                <a href="menu.html">Menu</a>
             </li>
             <li>
                 <a href="">Galerie</a>
             </li>
             <li>
-                <a href="">Contact</a>
+                <a href="contact.html">Contact</a>
             </li>
         </ul>
+        <img src="./Public/menu (1).png" alt="menu icon" width="20px" height="20px" id="menuIcon">
      </nav>
     <!-- ----------NavBar----------- -->
     <!-- ----------Hero Section----------- -->
@@ -40,14 +43,14 @@
                 Discover delicious, natural meals made with fresh ingredients 
                 that fuel your body and mind. Start your healthy journey today.
             </p>
-            <button>
+            <button onclick="location.href=`#ExploreMenu`" >
                 Explore Menu
             </button>
         </div>
     </section>
     <!-- ----------Hero Section----------- -->
     <!-- ----------menu Section----------- -->
-    <section class="menuSection">
+    <section class="menuSection" id="ExploreMenu">
             <div >
                 <div class="divOfIcon">
                     <img src="./Public/food.png" alt="Food icon" width="100px" height="100px">
@@ -231,13 +234,13 @@
        </h1>
        <div class="slides">
             <div>
-                <img src="./Public/top-view-chicken-fillet-cotlets-with-green-salad-carrot.jpg" alt="checken" width="370px" height="370px">
-                <img src="./Public/kids-mini-pancakes-treat-with-kiwi-berries.jpg" alt="starters" width="370px" height="370px">
+                <img src="./Public/top-view-chicken-fillet-cotlets-with-green-salad-carrot.jpg" alt="checken" width="370px" height="370px" class="sildeImages">
+                <img src="./Public/kids-mini-pancakes-treat-with-kiwi-berries.jpg" alt="starters" width="370px" height="370px" class="sildeImages">
             </div>
-            <img src="./Public/healthy-breakfast-composition.jpg" alt="juice" width="370px" height="800px">
+            <img src="./Public/healthy-breakfast-composition.jpg" alt="juice" width="370px" height="800px" class="Tall_ImgSlide">
             <div>
-                <img src="./Public/arrangement-veggies-salmon-fish-flat-lay.jpg" alt="salom" width="370px" height="370px">
-                <img src="./Public/chopsticks-soy-sauce-near-rolls.jpg" alt="sushi" width="370px" height="370px">
+                <img src="./Public/arrangement-veggies-salmon-fish-flat-lay.jpg" alt="salom" width="370px" height="370px" class="sildeImages">
+                <img src="./Public/chopsticks-soy-sauce-near-rolls.jpg" alt="sushi" width="370px" height="370px" class="sildeImages">
             </div>
         </div>
     </section>
@@ -252,7 +255,14 @@
                 <p>
                     Good food, good health, good life. Thank you for choosing us!
                 </p>
-    
+                <div class="socialMedia">
+                    <img src="./Public/facebook.png" alt="facebook" width="40px" height="40px">
+                    <img src="./Public/instagram (1).png" alt="instagram" width="40px" height="40px">
+                    <img src="./Public/twitter.png" alt="twitter" width="40px" height="40px">
+                </div>
+                <p class="copyWrite">
+                    &copy;2025 FreashBite , All rights reserved
+                </p>
             </div>
             <div>
                 <ul class="listFooter">
@@ -269,14 +279,15 @@
                         <a href="">Contact</a>
                     </li>
                 </ul>
-            
-                <label for="Contact" id="ContactLabel">Contact</label>
-                <br>
-                <input type="text" id="Contact" placeholder=" your email">
-                <br>
-                <button>
-                    Join Us
-                </button>
+                <div class="ContactContainer">
+                    <label for="Contact" id="ContactLabel">Contact</label>
+                    <br>
+                    <input type="text" id="Contact" placeholder="YOUR EMAIL">
+                    <br>
+                    <button>
+                        Join Us
+                    </button>
+                </div>
             </div>
         </div>
      </footer>

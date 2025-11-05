@@ -1,52 +1,28 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+    --color:rgb(18, 128, 64);
+    --grayText:#666666
+}
 
-nav{
-    width: 100%;
-    height: 13vh;
+.divOfIcon,.foodItems,.secondItem,.socialMedia{   /* group of flexed between items */
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 
 }
-.logo{
-    font-size: 25px;
-    margin-top: 25px;
-    margin-left: 30px;
-    color: rgb(18, 128, 64);
-    cursor: pointer;
-}
-.list{
-    width: 70%;
+
+.menuSection,.item,.slides{ /* group of flexed around items */
     display: flex;
     justify-content: space-around;
-    margin-left: -300px;
-    margin-top: 32px;
 }
-.list li{
-    list-style-type: none;
-}
-.list li a{
-    text-decoration: none;
-    font-weight: bolder;
-    color: rgb(18, 128, 64);
-    letter-spacing: 2px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    border-radius: 7px;
-    margin-left:10px;
-    transition: 0.5s;
-}
-.list li a:hover{
-    background-color: rgb(18, 128, 64);
-    color: white;
-    
-}
+
+
 .HeroSection {
     position: relative;
     width: 100%;
@@ -65,7 +41,7 @@ nav{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(41, 39, 39, 0.6); /* use rgba instead of #29272785 */
+    background: rgba(41, 39, 39, 0.6); 
 }
 .HeroDescription{
     position: absolute;
@@ -79,8 +55,8 @@ nav{
     font-size: 65px;
 }
 .HeroDescription p{
-    margin: 0 auto;
     width: 650px;
+    margin: 0 auto;
     font-size: 20px;
     line-height: 50px;
     font-weight: bolder;
@@ -89,7 +65,7 @@ nav{
 .HeroDescription button,.menuButton button,footer button{
     margin-top: 40px;
     padding: 15px 35px;
-    background-color: rgb(18, 128, 64);
+    background-color: var(--color);
     border: none;
     color: white;
     border-radius: 8px;
@@ -111,15 +87,10 @@ nav{
 }
 
 .menuSection{
-    display: flex;
-    justify-content: space-around;
     margin-top: 30px;
-
 }
 
 .divOfIcon {
-    display: flex;
-    justify-content: space-between;
     margin-top: 37px;
 }
 .NumberOfDishes{
@@ -142,10 +113,7 @@ nav{
     border-radius: 15px;
     margin-top: 40px;
 }
-.foodItems{
-    display: flex;
-    justify-content: space-between;
-}
+
 .foodItems img{
     margin-top: 15px;
 }
@@ -156,8 +124,6 @@ nav{
     color: rgba(18, 128, 64, 0.691);
 }
 .item{
-    display: flex;
-    justify-content: space-around;
     font-size: 20px;
 }
 .item span:last-child{
@@ -175,17 +141,15 @@ nav{
     border-bottom: 1px dashed rgba(18, 128, 64, 0.691); /* you can change color */
   }
 .secondItem{
-    display: flex;
-    justify-content: space-between;
     font-size: 12px;
 }
 .secondItem span:first-child{
     margin-left: 51px;
-    color: #666666;
+    color: var(--grayText);
 }
 .secondItem span:last-child{
     margin-right: 27px;
-    color: #666666;
+    color: var(--grayText);
 }
 .allItems{
     line-height: 30px;
@@ -203,8 +167,6 @@ nav{
 
  .slides {
     width: 92%;
-    display: flex;
-    justify-content: space-around;
     margin: 8% auto;
   }
   .slides div {
@@ -223,60 +185,242 @@ nav{
     transition: 0.3s;
     opacity: 0.8 ;
   }
-  footer{
-    width: 100%;
-    height: 80vh;
-    background-color: #eee;
-    border-radius: 40px;
-    position: relative;
-  }
-  footer .footer{
-    width: 90%;
-    background-color: white;
-    margin: 10% auto;
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    height: 50vh;
-    border-radius: 30px;
-    position: absolute;
-    left: 5%;
-    top: -10%;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    padding-top: 5%;
-  }
-  .listFooter{
-    display: flex;
-    justify-content: space-around;
-    gap: 50px;
 
-  }
-  .listFooter li{
-    list-style-type: none;
-}
-.listFooter li a{
-    text-decoration: none;
-    color: black;
-}
-#ContactLabel{
-    font-size: 18px; 
-}
-#Contact{
-    width: 300px;
-    padding: 3% 7%;
-    border: none;
-    outline: rgba(18, 128, 64, 0.691);
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(18, 128, 64, 0.691);
-    font-size: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: 10%;
-}
-footer button{
-    margin-top: 10%;
+
+@media (max-width: 1200px) { 
+    /*----------- sliders----------- */
+    .slides{
+        width: 100%;
+        height: 100%;
+    }
+    .sildeImages{
+        width: 250px;
+        height: 250px;
+    }
+    .Tall_ImgSlide{
+        width: 300px;
+        height: 550px;
+    }
+    /*----------- sliders----------- */
+
+    /*----------- HeroSection----------- */
+    .HeroDescription{
+        top: 12%;
+    }
+    .HeroDescription p{
+        margin-left: -15%;
+    }
+    /*----------- HeroSection----------- */
+    /*----------- menuSection----------- */
+    .MainFoodItems h1{
+        font-size: 37px;
+    }
+    .divOfIcon img{
+        width: 90px;
+        height: 90px;
+        margin-top: 2%;
+    }
+    .NumberOfDishes span:first-child{
+        font-size: 40px;
+        margin-left: -2%;
+    }
+    .NumberOfDishes span:last-child{
+        font-size: 26px;
+        margin-left: -2%;
+    }
+    .DisheiImage{
+        width: 350px;
+        height: 500px;
+    }
+    .secondItem{
+        font-size: 10px;
+    }
+    .secondItem span:first-child{
+        margin-left: 5px;
+    }
+    .secondItem span:last-child{
+        margin-right: 0px;
+    }
+    .allItems{
+        margin-top: 100px;
+    }
+    .menuButton button{
+        width: 360px;
+    }
+    /*----------- menuSection----------- */
 
 }
-/* .contactForm{
-    margin-top: 15%;   
 
-} */
+@media (max-width: 963px) { 
+
+    .HeroDescription h1{
+        margin-left: -10%;
+    }
+    .HeroDescription button{
+        margin-left: -18%;
+    }
+    .HeroDescription p{
+        margin-left: -22%;
+        font-size: 16px;
+        width: 500px;
+    }
+    .menuSection{
+        flex-direction: column;
+        align-items: center;
+    }
+    .DisheiImage{
+        width: 700px;
+        height: 950px;
+    }
+    .MainFoodItems h1 {
+        font-size: 60px;
+        text-align: center;
+    }
+    .MainFoodItems{
+        width: 700px;
+        margin-top: 10%;
+    }
+    .item span:first-child{
+        margin-left: -5%;
+    }
+    .secondItem span:first-child{
+        margin-left: 5%;
+    }
+    .secondItem span:last-child{
+        margin-right: 8%;
+    }
+    .divOfIcon{
+        margin-top: 20%;
+    }
+    .menuButton{
+        display: flex;
+    }
+    .menuButton > button{
+        width: 700px; 
+        margin: 5% auto;
+    }
+
+
+    .sildeImages{
+        width: 180px;
+        height: 180px;
+    }
+
+    .Tall_ImgSlide{
+        width: 230px;
+        height: 400px;
+    }
+}
+@media (max-width: 768px) { 
+
+    .DisheiImage{
+        width: 480px;
+        height: 650px;
+    }
+    .MainFoodItems{
+        width: 500px;
+    }
+    .menuButton > button{
+        width: 500px;
+    }
+    .slides{
+        flex-direction: column;
+        margin-bottom: 23%;
+        align-items: center;
+        height: 100%;
+        gap: 40px;
+    }
+    .slides div{
+        flex-direction: row;
+        gap: 10px;
+    }
+    .sildeImages{
+        width: 240px;
+        height: 240px;
+    }
+    .Tall_ImgSlide{
+        width: 490px;
+        height: 200px;
+    }
+
+    .HeroDescription p{
+        width: 250px;
+        margin-left: 8%;
+        font-size: 12px;
+        
+    }
+    .HeroDescription h1{
+        font-size: 52px;
+    }
+    .HeroDescription button{
+        font-size: 16px;
+    }
+    
+}
+@media (max-width: 548px){
+    .HeroDescription p{
+        margin-left: -6%;
+        
+    }
+    .HeroDescription h1{
+        font-size: 42px;
+    }
+    .DisheiImage{
+        width: 420px;
+        height: 620px;
+    }
+    .MainFoodItems,.menuButton > button{
+        width: 420px;
+    }
+    .sildeImages{
+        width: 200px;
+        height: 200px;
+    }
+    .Tall_ImgSlide{
+        width: 400px;
+        height: 200px;
+    }
+} 
+@media (max-width: 425px){
+
+    .DisheiImage{
+        width: 360px;
+        height: 620px;
+    }
+    .MainFoodItems,.menuButton > button{
+        width: 360px;
+    }
+    .MainFoodItems .Dishestitle{
+        font-size: 40px;
+    }
+    .slides{
+        height: 100%;
+        gap: 50px;
+    }
+    .sildeImages{
+        width: 350px;
+        height: 350px;
+    }
+    .Tall_ImgSlide{
+        width: 350px;
+        height: 350px;
+    }
+    .slides div{
+        flex-direction: column;
+    }
+    .item{
+        font-size: 14px;
+        margin-left: 10px;        
+    }
+    .secondItem span:first-child{
+        margin-left: 0;
+    }
+    .secondItem span:last-child{
+        margin-right: 0;
+    }
+    .HeroDescription p{
+        font-size: 10px;
+        margin-left: -19%;
+    }
+
+}
