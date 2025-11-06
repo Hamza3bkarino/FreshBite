@@ -2,6 +2,7 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 :root{
     --color:rgb(18, 128, 64);
@@ -140,6 +141,8 @@ footer button:hover{
     margin-top: 12%;
     color: var(--grayText);
 }
+
+
 @media (max-width: 1200px) { 
     /*----------- footer----------- */
     footer .footer{
@@ -196,14 +199,25 @@ footer button:hover{
         display: none;
         z-index: 1;
         line-height: 50px;
-        width: 100px;
+        width: 150px;
         height: 210px;
         background-color: white;
-        padding-right: 65px;
         position: absolute;
-        right: 1%;
+        right: -2%;
+        top: 75%;
         border-radius: 10px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;   
+        gap: 10px;   
+        padding: 2%;
+    }
+    .list.show {
+        display: flex; 
+    }
+    .list li  a{
+        margin: 0;
     }
     footer .footer{
         width: 90%;
@@ -221,7 +235,7 @@ footer button:hover{
     }
 }
 
-@media (max-width: 425px){
+@media (max-width: 600px){
     .ContactContainer{
         display: none;
     }

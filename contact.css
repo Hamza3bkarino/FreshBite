@@ -11,6 +11,9 @@ body{
     --shadow: 0 8px 30px rgba(5,10,10,0.08);
     --radius: 14px;
   }
+
+/* --------------HeroContactSection------------------ */
+
 .HeroContactSection{
     display: flex;
     justify-content: space-around;
@@ -54,10 +57,11 @@ body{
     right: -4%;
 }
 
+  /* --------------HeroContactSection------------------ */
 
 
 
-  
+  /* --------------Form------------------ */
   
   /* Container */
   .contact-card {
@@ -78,7 +82,7 @@ body{
     border: 1px solid rgba(18,128,64,0.06);
   }
   
-  /* Headings */
+  /* Titles */
   .contact-form h2 {
     margin: 0 0 6px 0;
     font-size: 26px;
@@ -101,7 +105,7 @@ body{
   .contact-form input,
   .contact-form input,
   .contact-form textarea {
-    width: 100%;
+    width: 93%;
     padding: 12px 14px;
     border-radius: 10px;
     border: 1px solid rgba(10,10,10,0.06);
@@ -133,10 +137,11 @@ body{
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 0 8px 20px rgba(18,128,64,0.22);
-    transition: transform .14s ease, box-shadow .14s ease, opacity .14s ease;
   }
   
-  .send-btn svg { color: rgba(255,255,255,0.95); }
+  .send-btn svg { 
+    color: rgba(255,255,255,0.95); 
+}
   
   .send-btn:hover {
     transform: translateY(-3px);
@@ -163,3 +168,69 @@ body{
     margin: 2px 0 0 10px;
     display: none;
   }
+
+
+  /* --------------Form------------------ */
+
+
+
+@media (max-width:1200px){
+    .HeroContactSection h1{
+        font-size: 40px;
+    }
+    
+    .sectionImage{
+        width: 400px;
+    }
+    .sectionSecondImage{
+        width: 250px;
+        bottom: 20%;
+    }
+}
+@media (max-width: 963px) { 
+    
+    .sectionImage{
+        width: 340px;
+        height: 300px;
+        top: 40px;
+    }
+    .sectionSecondImage{
+       display: none;
+    }
+    .HeroContactSection h1{
+        font-size: 50px;
+    }
+    .HeroContactSection h1 img {
+        right: 20%;
+        top: -10px;
+    }
+}
+@media (max-width: 768px) { 
+    .HeroContactSection h1{
+        font-size:40px;
+        text-align: center;
+        left: -2%;
+    }
+    .HeroContactSection h1 img {
+        right: 2%;
+        top: -10px;
+    }
+    .sectionImage{
+        width: 270px;
+        height: 240px;
+        top: 55px;
+        right: 2%;
+    }
+}
+@media (max-width: 600px){
+    .HeroContactSection{
+        flex-direction: column;
+        align-items: center;
+    }
+    .HeroContactSection h1{
+        font-size: 45px;
+    }
+    .sectionImage{
+        width: 400px;
+    }
+}

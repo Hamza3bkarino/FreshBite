@@ -4,15 +4,9 @@ const menuIcon = document.getElementById('menuIcon');
 const list = document.querySelector('.list');
 
 menuIcon.addEventListener('click', function () {
-    if (list.style.display === "none") {
-        list.style.display = "block";
-        menuIcon.style.transform='rotate(90deg)'
-        menuIcon.style.transition='0.5s'
-    } else {
-        list.style.display = "none";
-        menuIcon.style.transform='rotate(0deg)'
-        menuIcon.style.transition='0.5s'
-    }
+    list.classList.toggle('show')
+    menuIcon.style.transform=list.classList.contains('show')?'rotate(90deg)':'rotate(0deg)'
+    menuIcon.style.transition='0.5s'
 });
 
 
@@ -82,12 +76,8 @@ sendBtn.addEventListener('click', function(e){
         nameValidationMsg.style.display='none'
     }
 
-    if(!email.value.trim()){
-        emailValidationMsg.textContent='Email should not be Empty'
-        emailValidationMsg.style.display='block'
-        valid=false
-    }else if(!email.value.trim().includes('@')){
-        emailValidationMsg.textContent='Email should contain @'
+    if(!email.checkValidity()){
+        emailValidationMsg.textContent='Email should be valid'
         emailValidationMsg.style.display='block'
         valid=false
     }else{
