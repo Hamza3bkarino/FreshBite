@@ -145,3 +145,173 @@ body{
     background-color: rgba(18, 128, 64, 0.691);
 }
 
+@media (max-width:1200px){
+    .menuHeroDescription .backgroung img{
+        width: 400px;
+        height: 300px;
+        margin-top: 27%;
+    }
+    .menuHeroDescription .description h1{
+        font-size: 60px;
+    }
+    .menuHeroDescription .description p{
+        font-size: 16px;
+    }
+    .card{
+        width: 50%;
+    }
+    .card img{
+        width: 50%;
+    }
+    .card button{
+        width: 42%;
+    }
+    .insideCard{
+        width:50%;
+    }
+    .descriptionPlate{
+        top: 70px;
+    }
+
+    .MenuCardSectionBreakFast,.MenuCardSectionLunch,.MenuCardSectionDinner{
+        height: 1330px;
+        
+    }
+    .allCards{
+        flex-direction: column;
+        align-items: center;
+        gap: 230px;
+        margin-top: 15%;
+    }
+
+
+}
+
+@media (max-width: 967px){
+
+   
+
+    .menuHeroDescription .backgroung img{
+        width: 330px;
+        height: 230px;
+        margin: 51% 0 0 5%;
+    }
+    .menuHeroDescription .description h1{
+        font-size: 40px;
+    }
+    .menuHeroDescription .description p{
+        font-size: 13px;
+    }
+
+
+    .insideCard h2{
+        font-size: 25px;
+    }
+     .descriptionPlate{
+        font-size: 11px;
+        top: 82px;
+    }
+    .categorie{
+        font-size: 10px;
+    }
+    .card{
+        width: 60%;
+    }
+    .MenuCardSectionBreakFast,.MenuCardSectionLunch,.MenuCardSectionDinner{
+        height:1300px;
+        
+    }
+
+
+
+}
+
+@media (max-width: 768px) { 
+    .menuHeroDescription {
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        gap: 90px;
+        margin-bottom: 20%;
+    }
+    .menuHeroDescription .backgroung img{
+        margin-top: 12%;
+        width: 500px;
+        width: 400px;
+    }
+    .menuHeroDescription .description h1{
+        font-size: 45px;
+
+    }
+    .menuHeroDescription .description{
+        width: 80%;
+        text-align: center;
+        align-items: center;
+    }
+    .menuHeroDescription .description p{
+        font-size: 12px;
+    }
+    .MenuCardSectionBreakFast,.MenuCardSectionLunch,.MenuCardSectionDinner{
+        height:1280px;
+        
+    }
+}
+
+@media (max-width: 676px){
+    .MenuCardSectionBreakFast,.MenuCardSectionLunch,.MenuCardSectionDinner{
+        height:auto;
+        overflow: visible;
+        
+    }
+    .card{
+        width: 80%;
+    }
+    .MenuCardSectionBreakFast .plateBtn button ,.MenuCardSectionLunch .plateBtn button,.MenuCardSectionDinner .plateBtn button{
+        display: none;
+    }
+    .allCards{
+        gap: 60px;
+    }
+    .MenuCardSectionBreakFast h1{
+        font-size: 50px;
+    }
+    .MenuCardSectionBreakFast h3{
+        font-size: 18px;
+    }
+    .card h2{
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 425px){
+    .menuHeroDescription .backgroung img{
+        margin-top: 12%;
+        width: 300px;
+        height: 200px;
+        margin-left: 0;
+    }
+    .menuHeroDescription .description h1{
+        font-size: 40px;
+
+    }
+    .menuHeroDescription .description{
+        width: 80%;
+        text-align: center;
+        align-items: center;
+    }
+    .menuHeroDescription .description p{
+        font-size: 10px;
+    }
+    .menuHeroDescription{
+        margin-bottom: 40%;
+
+    }
+    .card{
+        width: 90%;
+    }
+    .insideCard .descriptionPlate{
+        font-size: 10px;
+        top: 75px;
+    }
+}
